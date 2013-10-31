@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+
+% dodatkowe pakiety
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage{verbatim}
+
+% figures
+\usepackage{float}
+
+\usepackage{url}
+
+% linki
+\usepackage[hyperref]{xcolor}
+\usepackage{hyperref}
+\definecolor{link-blue}{rgb}{0.15,0.15,0.4}
+\hypersetup{
+    colorlinks = true,
+    linkcolor = link-blue,
+    citecolor = link-blue,
+    filecolor = link-blue,
+    urlcolor  = link-blue
+}
+
+\title{\textbf{Big Data -- opracowanie}}
+\author{Grzegorz Cichosz\\
+    Michał Lenart\\
+    Mateusz Rzeszutek\\
+    Dariusz Świętek}
+\date{}
+
+% ustawia rodzaje kropek przy wyliczeniach (itemize)
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemiii}{$\cdot$}
+\renewcommand{\labelitemiv}{$\ast$}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Jakieś streszczenie...
+\end{abstract}
+
+\tableofcontents
+\clearpage
+
+%---------------------------------------------------------------------------
+\section{Wstęp}
+\label{sec:wstep}
+
+% TODO
+Big Data...
+
+% section wstep (end)
+
+%---------------------------------------------------------------------------
+
+\nocite{*}
+\bibliographystyle{abbrv}
+\bibliography{literatura}
+
+\end{document}

@@ -1,0 +1,14 @@
+*~
+*.swp
+
+# LaTeX compilation trash files
+*.aux
+*.bbl
+*.blg
+*.log
+*.toc
+*.lof
+*.out
+
+# output PDF file
+*.pdf
