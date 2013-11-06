@@ -133,7 +133,20 @@ Przykładowa infrastruktura klastra GFS ukazana jest na obrazku \ref{fig:google:
 
 \subsubsection{BigTable}
 \label{ssub:bigtable}
-\textbf{BigTable}
+\textbf{BigTable} jest bazą danych NoSQL używaną przez Google. 
+
+BigTable jest rzadką, rozproszoną mapą, indeksowaną za pomocą dwóch ciągów znakowych (wiersza i kolumny) oraz 64-bitowej daty. Każda wartość w mapie jest po prostu tablicą bajtów
+$$(row: \texttt{string} \times column: \texttt{string} \times timestamp: \texttt{int64}) \mapsto \texttt{string}$$
+Tabelki BigTable są optymalizowane do użytku pod GFS poprzez podział na \textit{tablety} -- segmenty tabelki podzielone wzdłuż wiersza.
+
+Schemat struktury tabelki BigTable zaprezentowany jest na rysunku \ref{fig:google:big-table}.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{obrazki/big-table.png}
+    \caption{BigTable -- struktura}
+    \label{fig:google:big-table}
+\end{figure}
 
 \subsubsection{MapReduce}
 \label{ssub:mapreduce}
