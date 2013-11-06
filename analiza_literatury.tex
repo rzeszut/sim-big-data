@@ -150,7 +150,11 @@ Schemat struktury tabelki BigTable zaprezentowany jest na rysunku \ref{fig:googl
 
 \subsubsection{MapReduce}
 \label{ssub:mapreduce}
-\textbf{MapReduce}
+\textbf{MapReduce} jest modelem programowania, stworzonym przez Google i opisanym w \cite{dean08}. Model ten jest używany wraz z wspomnianymi wcześniej BigTable i GFS do analizy gigantycznych ilości danych w Google.
+
+\subsubsection{BigQuery}
+\label{ssub:bigquery}
+Google \textbf{BigQuery} jest usługą umozliwiającą osobom trzecim skorzystanie z infrastruktury Google do analizy Big Data \cite{www:google-big-query}.
 
 \subsection{Hadoop}
 \label{ssub:hadoop}
@@ -188,13 +192,13 @@ Na rysunku \ref{fig:hdfs_architecture} pokazano architekturę HDFS. Można na ni
 HDFS zaprojektowany jest tak, aby bardzo duże pliki przechowywane były przez maszyny w dużych klastrach. Przechowuje on  każdy plik jako ciąg bloków
 
 \begin{figure}[h]
-\centerline{\includegraphics[scale=0.5]{obrazki/HDFS architecture.png}}
+\centerline{\includegraphics[scale=0.5]{obrazki/HDFS_architecture.png}}
 \caption{Architektura HDFS}
 \label{fig:hdfs_architecture}
 \end{figure}
 
 \subsubsection{Wysokkopoziomowa architektura HDFS}
-\label{ssub:hdfs_architecture}
+\label{ssub:hdfs_high_level_architecture}
 Klaster Hadoop składa się z jednego węzła ,,mistrza'' (master) i wielu węzłów ,,niewolników'' (slaves). JobTracker jest serwisem wewnątrz Hadoop, który ,,dzierżawi'' zadania MapReduce dla konkretnych węzłów w klastrze. Najlepiej jakby to były węzły, które zawierają dane, a ewentualnie są na tej samej półce.
 
 TaskTracker jest węzłem w klastrze, który akceptuje zadania mapowania, redukcji oraz przetasowania z JobTrackera. Węzeł główny składa się z JobTrackera, TaskTrackera, NameNode'a oraz DataNode'a. Węzeł podrzędny (niewolnik) działa zarówno jako DataNode oraz TaskTracker.ś
@@ -202,7 +206,7 @@ TaskTracker jest węzłem w klastrze, który akceptuje zadania mapowania, redukc
 Wszytko to zobrazowane jest na rysunku \ref{fig:hdfs_hight_level_architecture}.
 
 \begin{figure}[h]
-\centerline{\includegraphics[scale=0.5]{obrazki/wysokopoziomowa architektura hadoop.png}}
+\centerline{\includegraphics[scale=0.5]{obrazki/wysokopoziomowa_architektura_hadoop.png}}
 \caption{Wysokopoziomowa architektura HDFS}
 \label{fig:hdfs_hight_level_architecture}
 \end{figure}
