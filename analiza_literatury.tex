@@ -153,8 +153,69 @@ Schemat struktury tabelki BigTable zaprezentowany jest na rysunku \ref{fig:googl
 \textbf{MapReduce}
 
 \subsection{Hadoop}
-\label{sub:hadoop}
-% TODO
+\label{ssub:hadoop}
+Apache Hadoop jest otwartą (open source) platformą implementującą paradygmat MapReduce \cite{dean08}, które wyprodukowało Google. Jego autorem jest Doug Cutting.
+
+\subsubsection{Historia}
+\label{ssub:hadoop_historia}
+Projekt o nazwie Hadoop rozpoczęto w 2005 r. Jego tworzenie trwało stosunkowo długo, ponieważ dopiero  w 2011 r. opublikowano pierwszą wersję - Hadoop 1.0. Produkt ten od początku był tworzony jako platforma mająca na celu obsługę bardzo dużych zbiorów danych. 
+
+\subsubsection{Ogólne działanie}
+\label{ssub:ogolne_dzialanie}
+Ogólną myślą Hadoop jest podzielenie dużych zbiorów danych na mniejsze, przetwarzane równolegle w węzłach wykorzystujących serwery. Wielką zaletą tej platformy jest niezależność od systemu operacyjnego oraz oczywiście wspomniana już wcześniej możliwość obsługi danych niestrukturyzowanych.
+
+Wykorzystując narzędzia Apache Flume oraz Apache Sqoop, odpowiednio służących do wymiany danych między systemami RDBMS i Hadoop oraz przekierowanie logów systemowych do Hadoop w czasie rzeczywistym, możliwe jest zintegrowanie już stworzonego systemu razem z platformą Hadoop. Zaletą tego podejścia jest możliwość pracy z danymi niezależnie od ich wielkości. Wraz z powiększeniem się ilości danych należy tylko dodać nowe węzły Hadoop oraz serwery, które przetwarzają dane.
+
+\subsubsection{Apache Hadoop}
+\label{ssub:apache_hadoop}
+Apache Hadoop jest open-sourcowym oraz skalowalnym oprogramowaniem. Jest to framework pozwalajócy na przetwarzanie bardzo dużych zbiorów danych z różnych komputerów używajóc prostego modelu programowania. Umożliwia on pracę z tysiócami obliczeniowo niezależnymi komputerami oraz petabajtami danych. Hadoop pochodzi z MapReduce oraz Google File System.
+
+\subsubsection{Hadoop Distributed File System}
+\label{ssub:hdfs}
+Hadoop Distributed File System (HDFS) jest rozproszonym systemem plików zapewniajócym odporność na uszkodzenia. HDFS zapewnia dostęp o wysokiej przepustowości do danych aplikacji oraz nadaje się do obsługi aplikacji, które posiadajó duże zbiory danych. Hadoop zapewnia system plików, które mogó przechowywać dane na tysiócach serwerów i pracuje w oparciu o system MapReduce. Duże dane automatycznie dzielone só na mniejsze kawałki, które mogó być przetwarzane przez różne węzły klastra hadoop.
+
+Obrazek \ref{fig:rozklad_danych} przedstawia rozkład danych w węzłach w czasie ładowania.
+
+\begin{figure}[h]
+\centerline{\includegraphics[scale=0.5]{obrazki/rozklad_danych.png}}
+\caption{Schemat działania algorytmu genetycznego}
+\label{fig:rozklad_danych}
+\end{figure}
+
+\subsubsection{Architektura HDFS}
+\label{ssub:hdfs_architecture}
+Na rysunku \ref{fig:hdfs_architecture} pokazano architekturę HDFS. Można na nim zobaczyć, że klaster HDFS składa się z pojedynczego NameNode'a (serwer główny), który odpowiedzialny jest za zarządzanie przestrzenią nazw oraz regulacją dostępności plików przez klientów. Ponadto występuje również pewna liczba DataNode'ów (węzłów danych), zwykle jeden na każdy węzeł w klastrze, które zarządzają pamięcią dołączoną do węzłów, które działają. HDFS pokazuje przestrzeń nazw systemu plików i pozwala na przechowywanie danych użytkownika w plikach. Plik podzielony jest na jeden lub więcej bloków, które przechowywane są w węzle danych. Serwer główny (NameNode) mapuje bloki do węzłów danych.
+HDFS zaprojektowany jest tak, aby bardzo duże pliki przechowywane były przez maszyny w dużych klastrach. Przechowuje on  każdy plik jako ciąg bloków
+
+\begin{figure}[h]
+\centerline{\includegraphics[scale=0.5]{obrazki/HDFS architecture.png}}
+\caption{Architektura HDFS}
+\label{fig:hdfs_architecture}
+\end{figure}
+
+\subsubsection{Wysokkopoziomowa architektura HDFS}
+\label{ssub:hdfs_architecture}
+Klaster Hadoop składa się z jednego węzła ,,mistrza'' (master) i wielu węzłów ,,niewolników'' (slaves). JobTracker jest serwisem wewnątrz Hadoop, który ,,dzierżawi'' zadania MapReduce dla konkretnych węzłów w klastrze. Najlepiej jakby to były węzły, które zawierają dane, a ewentualnie są na tej samej półce.
+
+TaskTracker jest węzłem w klastrze, który akceptuje zadania mapowania, redukcji oraz przetasowania z JobTrackera. Węzeł główny składa się z JobTrackera, TaskTrackera, NameNode'a oraz DataNode'a. Węzeł podrzędny (niewolnik) działa zarówno jako DataNode oraz TaskTracker.ś
+
+Wszytko to zobrazowane jest na rysunku \ref{fig:hdfs_hight_level_architecture}.
+
+\begin{figure}[h]
+\centerline{\includegraphics[scale=0.5]{obrazki/wysokopoziomowa architektura hadoop.png}}
+\caption{Wysokopoziomowa architektura HDFS}
+\label{fig:hdfs_hight_level_architecture}
+\end{figure}
+
+
+\subsubsection{Porównanie do relacyjnych baz danych}
+\label{ssub:porownanie_z_relacyjnymi}
+Platforma ta jest wspomagana przez stworzony przez firmę Google framework programistyczny MapReduce (opisany po krótce w sekcji \ref{sub:mapreduce}), który w znacznym stopniu ułatwia tworzenie narzędzi do analizy informacji. Jego przewagą nad relacyjnymi bazami danych jest to, że od samego początku jest przystosowany do zarządzania bazami przechowywującymi dane niestrukturalne.
+
+Platforma Hadoop nie ma na calu zastąpienie obecną infrastrukturę baz danych, a jedynie zwiększenie efektywności zarządzania pamięcią masową oraz wszelkiego rodzaju danymi.
+
+Większość firm korzystających z platformy Hadoop, używa je razem z relacyjnymi bazami danych. Zazwyczaj platforma ta służy do obrabiania wielkich danych, z którymi mogą sobie poradzić relacyjne bazy danych.
+
 
 \subsection{Zastosowania implementacji}
 %TODO
