@@ -100,12 +100,47 @@ Techniki \textbf{wizualizacji} naukowej są używane do tworzenia obrazków, dia
 \subsection{Implementacje}
 % TODO
 
-\subsubsection{Google}
+\subsection{Big Data wg Google}
 \label{ssub:google}
-% TODO
+System Big Data Google'a składa się z kilku elementów, m.in. rozproszonego systemu plików, bazy danych NoSQL, architektury MapReduce.
 
-\subsubsection{Hadoop}
-\label{ssub:hadoop}
+\subsubsection{GFS}
+\label{ssub:gfs}
+\textbf{GFS} (\textit{Google File System}) jest rozproszonym systemem plików uzywanym przez Google'a na swoich serwerach, opisanym w \cite{ghemawat03}. GFS jest zoptymalizowany do przechowywania olbrzymich ilości danych, generowanych przez usługi Google'a, głównie wyszukiwarkę. W przeciwieństwie do większości systemów plików, GFS nie jest zaimplementowany w jądrze systemu, tylko jako zwyczajna biblioteka.
+
+W klastrze GFS występują dwa typy serwerów:
+\begin{itemize}
+    \item \textbf{Master} -- tylko jeden w danym systemie
+    \item \textbf{Chunk Server} -- może ich być wiele
+\end{itemize}
+Każdy plik w systemie jest dzielony na bloki (wielkości 64MB), identyfikowane64-bitowym kluczem. Bloki te są przechowywane na \textit{Chunk Server}ach. Każdy taki blok jest replikowany kilka razy w klastrze.
+Serwer \textit{Master} nie przechowuje samych bloków, lecz tylko metadane z nimi związane, takie jak mapowanie kluczy na lokacje bloków i ich kopii, jakie bloki składają się na jakie pliki, etc.
+Dostęp do danych działa w następujący sposób:
+\begin{enumerate}
+    \item Aplikacja pyta serwera \textit{Master} o lokację żądanego bloku
+    \item Jeśli na danym bloku nie są przeprowadzane żadne operacje, \textit{Master} zwraca adres do bloku
+    \item Aplikacja modyfikuje dane bezpośrednio na \textit{Chunk server}ze wskazanym przez adres podanym przez serwer główny.
+\end{enumerate}
+
+Przykładowa infrastruktura klastra GFS ukazana jest na obrazku \ref{fig:google:gfs}.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.2]{obrazki/GoogleFileSystemGFS.png}
+    \caption{Google File System -- infrastruktura}
+    \label{fig:google:gfs}
+\end{figure}
+
+\subsubsection{BigTable}
+\label{ssub:bigtable}
+\textbf{BigTable}
+
+\subsubsection{MapReduce}
+\label{ssub:mapreduce}
+\textbf{MapReduce}
+
+\subsection{Hadoop}
+\label{sub:hadoop}
 % TODO
 
 \subsection{Zastosowania implementacji}
