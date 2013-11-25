@@ -250,4 +250,447 @@ Większość firm korzystających z platformy Hadoop, używa je razem z relacyjn
     \item[wrzesień 2011] \hfill \\ firma BackType wypuszcza Storm \hfill \\ złożony procesor zdarzeniowy i framework do obliczeń rozproszonych,
 \end{description}
 
+\subsection{Analiza artykułów i patentów}
+\label{sub:analiza_artykulow}
+Analizując dane dotyczące artykułów i patentów związanych z Big Data, oraz jego różnymi implementacjami, można zauważyć, że jest to technologia rozwijająca się. Na poniżej zamieszczonych wykresach wyraźnie widać, że z roku na rok pojawia się coraz więcej artykułów, autorów, czasopism, a także patentów związanych z zagadnieniem Big Data. W przeciągu 20 lat liczba artykułów związanych z Big Data wzrosła ponad trzykrotnie, natomiast liczba autorów, którzy traktują o tym zagadnieniu w swoich publikacjach prawie czterokrotnie. Najbardziej aktywnym z pośród nich, przez ostatnie 20 lat, był J. Philippe Rushton Kanadyjski psycholog widzący zastosowanie Big Data w psychometrii. W przeciągu ostatnich 20 lat trzykotnie zwiększyła się również liczba wydawnictw, na łamach których były publikowane były teksty mające związek z Big Data, z czego najwięcej z nich pojawiło się w czasopiśmie naukowym z zakresu psychologii osobowości "Personality and Individual Differences". Dużo szybciej Big Data rozwija się, jeżeli chodzi o sprawy patentowe. Tylko w przeciągu ostatnich trzech lat liczba patentów dotyczących Big Data wzrosła ponad trzykrotnie, tak samo jak liczba instytucji je zgłaszających, z czego najwięcej zgłosiła ich Chińska firma telekomunikacyjna ZTE. Wyraźnie widać, że dziedzina Big Data cały czas jest rozwijana, oraz cieszy się coraz większym zainteresowaniem, skoro poza obecnymi już w tym obszarze "wielkimi graczami" jak chociażby Google, zaczyna się nią interesować jedna z największych firm, jednego z najszybciej rozwijających się państw na świecie.
+
+Ponieważ zwiększa się zainterezowanie tematem Big Data, zwiększa się również zainteresowanie jego konkretnymi implementacjami, jak na przykład Hadoop, czy Map Reduce. Od czasu utworzenia tych implementacji około 8 lat temu, liczba artykułów które o nich traktowały wzrosła z zera, do ponad stu rocznie. Przyglądając się osobom, które napisały tych artykułów najwięcej, można zauważyć, że zdecydowana większość z nich jest pochodzenia chińskiego, co prawdopodobnie oznacza, że temat ten cieszy się dużym zainteresowaniem w Państwie Środka. Najwięcej artykułów znalazło się w czasopiśmie "Future Generation Computer Systems", które jest pismem branżowym o Grid, oraz eNauce. Ciekawie wygląda sytuacja związana z patentami w zakresie Hadoop, oraz MapReduce. Oczywiście bardzo łątwo jest zauważyć trend rosnący, zarówno jeżeli chodzi o ilość ilość patentów, jak i ilość instytucji je zgłaszających, jednak w 2008 roku liczba zgłoszonych patentów związanych z MapReduce była taka sama jak w roku 2012, i to za sprawą jednego tylko przedsiębiorstwa, którym jest Yahoo!. Jeżeli chodzi o Hadoop, to najwięcej patentów zgłosił uniwersytet w Nanjang, co potwierdza zainteresowanie Chińczyków tematem Big Data.
+
+\begin{tikzpicture}
+        \begin{axis}[
+			bar width=5pt,
+			title=Liczba artykułów dotyczących Big Data,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+                (1995,   57)
+				(1996,   54)
+				(1997,   71)
+				(1998,   86)
+				(1999,   64)
+				(2000,   68)
+				(2001,   80)
+				(2002,   64)
+				(2003,   90)
+				(2004,   86)
+				(2005,   117)
+				(2006,   114)
+				(2007,   123)
+				(2008,   139)
+				(2009,   161)
+				(2010,   132)
+				(2011,   130)
+				(2012,   176)
+				(2013,   183)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	\begin{tikzpicture}
+        \begin{axis}[
+			bar width=5pt,
+			title=Liczba autorów piszących o Big Data,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+                (1995,   142)
+				(1996,   123)
+				(1997,   185)
+				(1998,   251)
+				(1999,   176)
+				(2000,   150)
+				(2001,   183)
+				(2002,   192)
+				(2003,   203)
+				(2004,   223)
+				(2005,   328)
+				(2006,   347)
+				(2007,   324)
+				(2008,   387)
+				(2009,   398)
+				(2010,   386)
+				(2011,   363)
+				(2012,   540)
+				(2013,   571)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	
+	\begin{tikzpicture}
+        \begin{axis}[
+			bar width=5pt,
+			title=Liczba czasopism publikujących artykuły o Big Data,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+                (1995,   38)
+				(1996,   44)
+				(1997,   53)
+				(1998,   68)
+				(1999,   54)
+				(2000,   54)
+				(2001,   63)
+				(2002,   55)
+				(2003,   65)
+				(2004,   73)
+				(2005,   91)
+				(2006,   89)
+				(2007,   98)
+				(2008,   92)
+				(2009,   115)
+				(2010,   104)
+				(2011,   88)
+				(2012,   126)
+				(2013,   134)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	\begin{tikzpicture}
+        \begin{axis}[
+			bar width=20pt,
+			title=Liczba patentów dotyczących Big Data,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2011,   75)
+				(2012,   192)
+				(2013,   252)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	
+		\begin{tikzpicture}
+        \begin{axis}[
+			bar width=20pt,
+			title=Liczba zgłaszających patenty związane z Big Data,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2011,   76)
+				(2012,   214)
+				(2013,   283)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	
+	\begin{tikzpicture}
+        \begin{axis}[
+			bar width=10pt,
+			title=Liczba artykułów dotyczących Hadoop,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2008,   1)
+				(2009,   3)
+				(2010,   12)
+				(2011,   28)
+				(2012,   52)
+				(2013,   103)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	\begin{tikzpicture}
+        \begin{axis}[
+			bar width=10pt,
+			title=Liczba autorów piszących o Hadoop,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2008,   4)
+				(2009,   13)
+				(2010,   49)
+				(2011,   102)
+				(2012,   171)
+				(2013,   337)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	
+	\begin{tikzpicture}
+        \begin{axis}[
+			bar width=10pt,
+			title=Liczba czasopism publikujących artykuły o Hadoop,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2008,   1)
+				(2009,   2)
+				(2010,   6)
+				(2011,   13)
+				(2012,   32)
+				(2013,   37)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	\begin{tikzpicture}
+        \begin{axis}[
+			bar width=15pt,
+			title=Liczba patentów dotyczących Hadoop,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2010,	 1)
+				(2011,   11)
+				(2012,   40)
+				(2013,   54)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	
+		\begin{tikzpicture}
+        \begin{axis}[
+			bar width=15pt,
+			title=Liczba zgłaszających patenty związane z Hadoop,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2010,	 1)
+				(2011,   10)
+				(2012,   31)
+				(2013,   51)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	
+	\begin{tikzpicture}
+        \begin{axis}[
+			bar width=10pt,
+			title=Liczba artykułów dotyczących MapReduce,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2007, 2008, 2009, 2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2007,	 3)
+				(2008,   2)
+				(2009,   8)
+				(2010,   21)
+				(2011,   63)
+				(2012,   98)
+				(2013,   153)
+            };
+        \end{axis}
+    \end{tikzpicture}
+		\begin{tikzpicture}
+        \begin{axis}[
+			bar width=10pt,
+			title=Liczba autorów piszących o MapReduce,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2007, 2008, 2009, 2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2007,	 8)
+				(2008,   4)
+				(2009,   28)
+				(2010,   72)
+				(2011,   275)
+				(2012,   482)
+				(2013,   642)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	
+		\begin{tikzpicture}
+        \begin{axis}[
+			bar width=10pt,
+			title=Liczba czasopism publikujących artykuły o MapReduce,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2007, 2008, 2009, 2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2007,	 3)
+				(2008,   2)
+				(2009,   7)
+				(2010,   12)
+				(2011,   32)
+				(2012,   49)
+				(2013,   61)
+            };
+        \end{axis}
+    \end{tikzpicture}
+		\begin{tikzpicture}
+        \begin{axis}[
+			bar width=10pt,
+			title=Liczba patentów dotyczących MapReduce,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2008,   34)
+				(2009,   1)
+				(2010,   2)
+				(2011,   19)
+				(2012,   34)
+				(2013,   42)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	
+		\begin{tikzpicture}
+        \begin{axis}[
+			bar width=10pt,
+			title=Liczba zgłaszających patenty związane z MapReduce,
+			% xlabel=Rok,
+            ylabel=Liczba artykułów,
+            symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
+            xtick=data,
+			x tick label style={rotate=90, anchor=east}
+          ]
+            \addplot[ybar,fill=blue] coordinates {
+				(2008,   3)
+				(2009,   1)
+				(2010,   2)
+				(2011,   16)
+				(2012,   35)
+				(2013,   46)
+            };
+        \end{axis}
+    \end{tikzpicture}
+	
+		\begin{table}[t]
+		\caption{Najczęściej występujące słowa kluczowe w artykułach o Big Data}
+		\label{tabela_bigdata}
+		\begin{tabular}{|c|c|}
+			\hline 
+			Słowo kluczowe & Liczba artykułów\\
+			\hline
+			big five & 83 \\
+			\hline
+			data mining & 56 \\
+			\hline
+			personality & 47 \\
+			\hline
+			classification & 21 \\
+			\hline
+			general factor of personality & 19 \\
+			\hline
+			endothelin & 18 \\
+			\hline
+			bioinformatics & 16 \\
+			\hline
+			clustering & 16 \\
+			\hline
+			data warehouse & 16 \\
+			\hline
+			database & 16 \\
+			\hline
+			big endothelin-1 & 15 \\
+			\hline
+			big data & 14 \\
+			\hline
+			endothelin-1 & 14 \\
+			\hline
+			data acquisition & 13 \\
+			\hline
+			data protection & 13 \\
+			\hline
+			privacy & 12 \\
+			\hline
+			cloud computing & 11 \\
+			\hline
+			cluster analysis & 11 \\
+			\hline
+			data sharing & 11 \\
+			\hline
+			gis & 11 \\
+			\hline
+			data analysis & 10 \\
+			\hline
+			data management & 10 \\
+			\hline
+			databases & 10 \\
+			\hline
+			internet & 10 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[t]
+	\caption{Najczęściej występujące słowa kluczowe w artykułach o Hadoop}
+	\label{tabela_bigdata}
+		\begin{tabular}{|c|c|}
+			\hline 
+			Słowo kluczowe & Liczba artykułów\\
+			\hline
+			cloud computing & 54 \\
+			\hline
+			mapreduce & 40 \\
+			\hline
+			hadoop & 20 \\
+			\hline
+			distributed computing & 10 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[t]
+	\caption{Najczęściej występujące słowa kluczowe w artykułach o MapReduce}
+	\label{tabela_bigdata}
+		\begin{tabular}{|c|c|}
+			\hline 
+			Słowo kluczowe & Liczba artykułów\\
+			\hline
+			cloud computing & 64 \\
+			\hline
+			mapreduce & 62 \\
+			\hline
+			hadoop & 18 \\
+			\hline
+			scheduling & 11 \\
+			\hline
+			distributed computing & 10 \\
+			\hline
+		\end{tabular}
+	\end{table}
+
 % section Analiza literatury (end)
