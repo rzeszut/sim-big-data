@@ -213,6 +213,123 @@ Przykładami systemów, w których zastosowano ten model danych mogą byc np.
 
 Podsumowując grafowe bazy danych są znacznie bardziej efektywne od relacyjnych w przypadku dużej klasy problemów. Są one elastyczne, wydajne oraz proste do zrozumienia. Istnieje wiele zastosowan, dla których bazy te są jedynym dobrym i możliwym rozwiązaniem.
 
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+			bar width=5pt,
+			%title=Liczba artykułów dotyczących grafowych baz danych,
+			% xlabel=Rok,
+			ylabel=Liczba artykułów,
+			symbolic x coords={1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013},
+			xtick=data,
+			x tick label style={rotate=90, anchor=east}
+			]
+			\addplot[ybar,fill=blue] coordinates {
+				(1995,   34)
+                (1996,   35)
+                (1997,   43)
+                (1998,   39)
+                (1999,   47)
+                (2000,   42)
+                (2001,   53)
+                (2002,   42)
+                (2003,   49)
+                (2004,   63)
+                (2005,   61)
+                (2006,   71)
+                (2007,   99)
+                (2008,   119)
+                (2009,   157)
+                (2010,   141)
+                (2011,   152)
+                (2012,   137)
+                (2013,   112)
+			};
+			\end{axis}
+	\end{tikzpicture}
+	\caption{Liczba artykułów dotyczących grafowych baz danych}
+    \label{fig:art:graph}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			bar width=5pt,
+			%title=Liczba autorów piszących o grafowych bazach danych,
+			%xlabel=Rok,
+			ylabel=Liczba autorów,
+			symbolic x coords={1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013},
+			xtick=data,
+			x tick label style={rotate=90, anchor=east}
+			]
+			\addplot[ybar,fill=blue] coordinates {
+				(1995,   70)
+                (1996,   80)
+                (1997,   101)
+                (1998,   94)
+                (1999,   127)
+                (2000,   118)
+                (2001,   131)
+                (2002,   108)
+                (2003,   133)
+                (2004,   175)
+                (2005,   191)
+                (2006,   196)
+                (2007,   320)
+                (2008,   378)
+                (2009,   514)
+                (2010,   449)
+                (2011,   473)
+                (2012,   438)
+                (2013,   376)
+			};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Liczba autorów piszących o grafowych bazach danych}
+	\label{fig:aut:graph}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			bar width=5pt,
+			%title=Liczba czasopism publikujących o grafowych bazach danych,
+			%xlabel=Rok,
+			ylabel=Liczba czasopism,
+			symbolic x coords={1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013},
+			xtick=data,
+			x tick label style={rotate=90, anchor=east}
+			]
+			\addplot[ybar,fill=blue] coordinates {
+				(1995,   27)
+                (1996,   25)
+                (1997,   38)
+                (1998,   27)
+                (1999,   39)
+                (2000,   32)
+                (2001,   41)
+                (2002,   32)
+                (2003,   42)
+                (2004,   48)
+                (2005,   51)
+                (2006,   55)
+                (2007,   70)
+                (2008,   81)
+                (2009,   111)
+                (2010,   109)
+                (2011,   111)
+                (2012,   101)
+                (2013,   79)
+			};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Liczba autorów piszących o grafowych bazach danych}
+	\label{fig:journal:graph}
+\end{figure}
+
 \subsection{Wizualizacja}
 \label{sub:wizualizacja}
 Techniki \textbf{wizualizacji} naukowej są używane do tworzenia obrazków, diagramów, wykresów bądź animacji, których zadaniem jest ułatwienie zrozumienia i przekzazanie pewnych wniosków wynikających z analizy danych \cite{lawrence1994}. Do tworzenia prostych wykresów i diagramów często używa się takiego oprogramowania jak R \cite{www:R} bądź Octave \cite{www:octave}.
@@ -275,6 +392,139 @@ Schemat struktury tabelki BigTable zaprezentowany jest na rysunku \ref{fig:googl
 \label{ssub:mapreduce}
 \textbf{MapReduce} jest modelem programowania, stworzonym przez Google i opisanym w \cite{dean08}. Model ten jest używany wraz z wspomnianymi wcześniej BigTable i GFS do analizy gigantycznych ilości danych w Google.
 
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                bar width=10pt,
+                %title=Liczba artykułów dotyczących MapReduce,
+                % xlabel=Rok,
+                ylabel=Liczba artykułów,
+                symbolic x coords={2007, 2008, 2009, 2010, 2011, 2012, 2013},
+                xtick=data,
+                x tick label style={rotate=90, anchor=east}
+            ]
+            \addplot[ybar,fill=blue] coordinates {
+                (2007,	 3)
+                (2008,   2)
+                (2009,   8)
+                (2010,   21)
+                (2011,   63)
+                (2012,   98)
+                (2013,   153)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Liczba artykułów dotyczących MapReduce}
+    \label{fig:art:mapreduce}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                bar width=10pt,
+                %title=Liczba autorów piszących o MapReduce,
+                % xlabel=Rok,
+                ylabel=Liczba autorów,
+                symbolic x coords={2007, 2008, 2009, 2010, 2011, 2012, 2013},
+                xtick=data,
+                x tick label style={rotate=90, anchor=east}
+            ]
+            \addplot[ybar,fill=blue] coordinates {
+                (2007,	 8)
+                (2008,   4)
+                (2009,   28)
+                (2010,   72)
+                (2011,   275)
+                (2012,   482)
+                (2013,   642)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Liczba autorów piszących o MapReduce}
+    \label{fig:aut:mapreduce}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                bar width=10pt,
+                %title=Liczba czasopism publikujących artykuły o MapReduce,
+                % xlabel=Rok,
+                ylabel=Liczba czasopism,
+                symbolic x coords={2007, 2008, 2009, 2010, 2011, 2012, 2013},
+                xtick=data,
+                x tick label style={rotate=90, anchor=east}
+            ]
+            \addplot[ybar,fill=blue] coordinates {
+                (2007,	 3)
+                (2008,   2)
+                (2009,   7)
+                (2010,   12)
+                (2011,   32)
+                (2012,   49)
+                (2013,   61)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Liczba czasopism publikujących artykuły o MapReduce}
+    \label{fig:journal:mapreduce}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                bar width=10pt,
+                %title=Liczba patentów dotyczących MapReduce,
+                % xlabel=Rok,
+                ylabel=Liczba patentów,
+                symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
+                xtick=data,
+                x tick label style={rotate=90, anchor=east}
+            ]
+            \addplot[ybar,fill=blue] coordinates {
+                (2008,   34)
+                (2009,   1)
+                (2010,   2)
+                (2011,   19)
+                (2012,   34)
+                (2013,   42)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Liczba patentów dotyczących MapReduce}
+    \label{fig:patent:mapreduce}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                bar width=10pt,
+                %title=Liczba zgłaszających patenty związane z MapReduce,
+                % xlabel=Rok,
+                ylabel=Liczba zgłaszających,
+                symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
+                xtick=data,
+                x tick label style={rotate=90, anchor=east}
+            ]
+            \addplot[ybar,fill=blue] coordinates {
+                (2008,   3)
+                (2009,   1)
+                (2010,   2)
+                (2011,   16)
+                (2012,   35)
+                (2013,   46)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Liczba zgłaszających patenty związane z MapReduce}
+    \label{fig:invent:mapreduce}
+\end{figure}
+
 \subsection{BigQuery}
 \label{ssub:bigquery}
 Google \textbf{BigQuery} jest usługą umozliwiającą osobom trzecim skorzystanie z infrastruktury Google do analizy Big Data \cite{www:google-big-query}.
@@ -311,6 +561,132 @@ Obrazek \ref{fig:rozklad_danych} przedstawia rozkład danych w węzłach w czasi
     % figure caption is below the figure
     \caption{Rozklad danych HDFS}
     \label{fig:rozklad_danych}       % Give a unique label
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                bar width=10pt,
+                %title=Liczba artykułów dotyczących Hadoop,
+                % xlabel=Rok,
+                ylabel=Liczba artykułów,
+                symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
+                xtick=data,
+                x tick label style={rotate=90, anchor=east}
+            ]
+            \addplot[ybar,fill=blue] coordinates {
+                (2008,   1)
+                (2009,   3)
+                (2010,   12)
+                (2011,   28)
+                (2012,   52)
+                (2013,   103)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Liczba artykułów dotyczących Hadoop}
+    \label{fig:art:hadoop}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                bar width=10pt,
+                %title=Liczba autorów piszących o Hadoop,
+                % xlabel=Rok,
+                ylabel=Liczba autorów,
+                symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
+                xtick=data,
+                x tick label style={rotate=90, anchor=east}
+            ]
+            \addplot[ybar,fill=blue] coordinates {
+                (2008,   4)
+                (2009,   13)
+                (2010,   49)
+                (2011,   102)
+                (2012,   171)
+                (2013,   337)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Liczba autorów piszących o Hadoop}
+    \label{fig:aut:hadoop}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                bar width=10pt,
+                %title=Liczba czasopism publikujących artykuły o Hadoop,
+                % xlabel=Rok,
+                ylabel=Liczba czasopism,
+                symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
+                xtick=data,
+                x tick label style={rotate=90, anchor=east}
+            ]
+            \addplot[ybar,fill=blue] coordinates {
+                (2008,   1)
+                (2009,   2)
+                (2010,   6)
+                (2011,   13)
+                (2012,   32)
+                (2013,   37)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Liczba czasopism publikujących artykuły o Hadoop}
+    \label{fig:journal:hadoop}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                bar width=15pt,
+                %title=Liczba patentów dotyczących Hadoop,
+                % xlabel=Rok,
+                ylabel=Liczba patentów,
+                symbolic x coords={2010, 2011, 2012, 2013},
+                xtick=data,
+                x tick label style={rotate=90, anchor=east}
+            ]
+            \addplot[ybar,fill=blue] coordinates {
+                (2010,	 1)
+                (2011,   11)
+                (2012,   40)
+                (2013,   54)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Liczba patentów dotyczących Hadoop}
+    \label{fig:patent:hadoop}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                bar width=15pt,
+                %title=Liczba zgłaszających patenty związane z Hadoop,
+                % xlabel=Rok,
+                ylabel=Liczba zgłaszających,
+                symbolic x coords={2010, 2011, 2012, 2013},
+                xtick=data,
+                x tick label style={rotate=90, anchor=east}
+            ]
+            \addplot[ybar,fill=blue] coordinates {
+                (2010,	 1)
+                (2011,   10)
+                (2012,   31)
+                (2013,   51)
+            };
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Liczba zgłaszających patenty związane z Hadoop}
+    \label{fig:invent:hadoop}
 \end{figure}
 
 \subsection{Architektura HDFS}
@@ -546,382 +922,6 @@ Ponieważ zwiększa się zainteresowanie tematem Big Data, zwiększa się równi
     \end{tikzpicture}
     \caption{Liczba zgłaszających patenty związane z Big Data}
     \label{fig:invent:big-data}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                bar width=10pt,
-                %title=Liczba artykułów dotyczących Hadoop,
-                % xlabel=Rok,
-                ylabel=Liczba artykułów,
-                symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
-                xtick=data,
-                x tick label style={rotate=90, anchor=east}
-            ]
-            \addplot[ybar,fill=blue] coordinates {
-                (2008,   1)
-                (2009,   3)
-                (2010,   12)
-                (2011,   28)
-                (2012,   52)
-                (2013,   103)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Liczba artykułów dotyczących Hadoop}
-    \label{fig:art:hadoop}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                bar width=10pt,
-                %title=Liczba autorów piszących o Hadoop,
-                % xlabel=Rok,
-                ylabel=Liczba autorów,
-                symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
-                xtick=data,
-                x tick label style={rotate=90, anchor=east}
-            ]
-            \addplot[ybar,fill=blue] coordinates {
-                (2008,   4)
-                (2009,   13)
-                (2010,   49)
-                (2011,   102)
-                (2012,   171)
-                (2013,   337)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Liczba autorów piszących o Hadoop}
-    \label{fig:aut:hadoop}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                bar width=10pt,
-                %title=Liczba czasopism publikujących artykuły o Hadoop,
-                % xlabel=Rok,
-                ylabel=Liczba czasopism,
-                symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
-                xtick=data,
-                x tick label style={rotate=90, anchor=east}
-            ]
-            \addplot[ybar,fill=blue] coordinates {
-                (2008,   1)
-                (2009,   2)
-                (2010,   6)
-                (2011,   13)
-                (2012,   32)
-                (2013,   37)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Liczba czasopism publikujących artykuły o Hadoop}
-    \label{fig:journal:hadoop}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                bar width=15pt,
-                %title=Liczba patentów dotyczących Hadoop,
-                % xlabel=Rok,
-                ylabel=Liczba patentów,
-                symbolic x coords={2010, 2011, 2012, 2013},
-                xtick=data,
-                x tick label style={rotate=90, anchor=east}
-            ]
-            \addplot[ybar,fill=blue] coordinates {
-                (2010,	 1)
-                (2011,   11)
-                (2012,   40)
-                (2013,   54)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Liczba patentów dotyczących Hadoop}
-    \label{fig:patent:hadoop}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                bar width=15pt,
-                %title=Liczba zgłaszających patenty związane z Hadoop,
-                % xlabel=Rok,
-                ylabel=Liczba zgłaszających,
-                symbolic x coords={2010, 2011, 2012, 2013},
-                xtick=data,
-                x tick label style={rotate=90, anchor=east}
-            ]
-            \addplot[ybar,fill=blue] coordinates {
-                (2010,	 1)
-                (2011,   10)
-                (2012,   31)
-                (2013,   51)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Liczba zgłaszających patenty związane z Hadoop}
-    \label{fig:invent:hadoop}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                bar width=10pt,
-                %title=Liczba artykułów dotyczących MapReduce,
-                % xlabel=Rok,
-                ylabel=Liczba artykułów,
-                symbolic x coords={2007, 2008, 2009, 2010, 2011, 2012, 2013},
-                xtick=data,
-                x tick label style={rotate=90, anchor=east}
-            ]
-            \addplot[ybar,fill=blue] coordinates {
-                (2007,	 3)
-                (2008,   2)
-                (2009,   8)
-                (2010,   21)
-                (2011,   63)
-                (2012,   98)
-                (2013,   153)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Liczba artykułów dotyczących MapReduce}
-    \label{fig:art:mapreduce}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                bar width=10pt,
-                %title=Liczba autorów piszących o MapReduce,
-                % xlabel=Rok,
-                ylabel=Liczba autorów,
-                symbolic x coords={2007, 2008, 2009, 2010, 2011, 2012, 2013},
-                xtick=data,
-                x tick label style={rotate=90, anchor=east}
-            ]
-            \addplot[ybar,fill=blue] coordinates {
-                (2007,	 8)
-                (2008,   4)
-                (2009,   28)
-                (2010,   72)
-                (2011,   275)
-                (2012,   482)
-                (2013,   642)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Liczba autorów piszących o MapReduce}
-    \label{fig:aut:mapreduce}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                bar width=10pt,
-                %title=Liczba czasopism publikujących artykuły o MapReduce,
-                % xlabel=Rok,
-                ylabel=Liczba czasopism,
-                symbolic x coords={2007, 2008, 2009, 2010, 2011, 2012, 2013},
-                xtick=data,
-                x tick label style={rotate=90, anchor=east}
-            ]
-            \addplot[ybar,fill=blue] coordinates {
-                (2007,	 3)
-                (2008,   2)
-                (2009,   7)
-                (2010,   12)
-                (2011,   32)
-                (2012,   49)
-                (2013,   61)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Liczba czasopism publikujących artykuły o MapReduce}
-    \label{fig:journal:mapreduce}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                bar width=10pt,
-                %title=Liczba patentów dotyczących MapReduce,
-                % xlabel=Rok,
-                ylabel=Liczba patentów,
-                symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
-                xtick=data,
-                x tick label style={rotate=90, anchor=east}
-            ]
-            \addplot[ybar,fill=blue] coordinates {
-                (2008,   34)
-                (2009,   1)
-                (2010,   2)
-                (2011,   19)
-                (2012,   34)
-                (2013,   42)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Liczba patentów dotyczących MapReduce}
-    \label{fig:patent:mapreduce}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                bar width=10pt,
-                %title=Liczba zgłaszających patenty związane z MapReduce,
-                % xlabel=Rok,
-                ylabel=Liczba zgłaszających,
-                symbolic x coords={2008, 2009, 2010, 2011, 2012, 2013},
-                xtick=data,
-                x tick label style={rotate=90, anchor=east}
-            ]
-            \addplot[ybar,fill=blue] coordinates {
-                (2008,   3)
-                (2009,   1)
-                (2010,   2)
-                (2011,   16)
-                (2012,   35)
-                (2013,   46)
-            };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Liczba zgłaszających patenty związane z MapReduce}
-    \label{fig:invent:mapreduce}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-			bar width=5pt,
-			%title=Liczba artykułów dotyczących grafowych baz danych,
-			% xlabel=Rok,
-			ylabel=Liczba artykułów,
-			symbolic x coords={1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013},
-			xtick=data,
-			x tick label style={rotate=90, anchor=east}
-			]
-			\addplot[ybar,fill=blue] coordinates {
-				(1995,   34)
-                (1996,   35)
-                (1997,   43)
-                (1998,   39)
-                (1999,   47)
-                (2000,   42)
-                (2001,   53)
-                (2002,   42)
-                (2003,   49)
-                (2004,   63)
-                (2005,   61)
-                (2006,   71)
-                (2007,   99)
-                (2008,   119)
-                (2009,   157)
-                (2010,   141)
-                (2011,   152)
-                (2012,   137)
-                (2013,   112)
-			};
-			\end{axis}
-	\end{tikzpicture}
-	\caption{Liczba artykułów dotyczących grafowych baz danych}
-    \label{fig:art:graph}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\begin{tikzpicture}
-		\begin{axis}[
-			bar width=5pt,
-			%title=Liczba autorów piszących o grafowych bazach danych,
-			%xlabel=Rok,
-			ylabel=Liczba autorów,
-			symbolic x coords={1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013},
-			xtick=data,
-			x tick label style={rotate=90, anchor=east}
-			]
-			\addplot[ybar,fill=blue] coordinates {
-				(1995,   70)
-                (1996,   80)
-                (1997,   101)
-                (1998,   94)
-                (1999,   127)
-                (2000,   118)
-                (2001,   131)
-                (2002,   108)
-                (2003,   133)
-                (2004,   175)
-                (2005,   191)
-                (2006,   196)
-                (2007,   320)
-                (2008,   378)
-                (2009,   514)
-                (2010,   449)
-                (2011,   473)
-                (2012,   438)
-                (2013,   376)
-			};
-		\end{axis}
-	\end{tikzpicture}
-	\caption{Liczba autorów piszących o grafowych bazach danych}
-	\label{fig:aut:graph}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\begin{tikzpicture}
-		\begin{axis}[
-			bar width=5pt,
-			%title=Liczba czasopism publikujących o grafowych bazach danych,
-			%xlabel=Rok,
-			ylabel=Liczba czasopism,
-			symbolic x coords={1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013},
-			xtick=data,
-			x tick label style={rotate=90, anchor=east}
-			]
-			\addplot[ybar,fill=blue] coordinates {
-				(1995,   27)
-                (1996,   25)
-                (1997,   38)
-                (1998,   27)
-                (1999,   39)
-                (2000,   32)
-                (2001,   41)
-                (2002,   32)
-                (2003,   42)
-                (2004,   48)
-                (2005,   51)
-                (2006,   55)
-                (2007,   70)
-                (2008,   81)
-                (2009,   111)
-                (2010,   109)
-                (2011,   111)
-                (2012,   101)
-                (2013,   79)
-			};
-		\end{axis}
-	\end{tikzpicture}
-	\caption{Liczba autorów piszących o grafowych bazach danych}
-	\label{fig:journal:graph}
 \end{figure}
 
 \begin{table}[t]
