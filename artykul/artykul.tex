@@ -13,17 +13,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %
-\RequirePackage{fix-cm}
-\documentclass[twocolumn]{svjour3}          % twocolumn
+\documentclass[twocolumn]{llncs}          % twocolumn
+\usepackage[a4paper,margin=2cm]{geometry}
 
 \usepackage{polski}
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
 
-\smartqed  % flush right qed marks, e.g. at end of proof
-
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage{morefloats}
 
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -50,7 +49,6 @@
 \renewcommand{\abstractname}{Abstract}
 \begin{abstract}
     Big data oznacza dosłownie ,,duże dane''. Termin ten powstał stosunkowo niedawno i jest on używany wtedy, gdy mówi się o przetwarzaniu bardzo dużych ilości danych. Na zaistnienie tej dość specyficznej dziedziny danych miał duży wpływ rozwój Internetu -- ilość danych pochodzących chociażby z Twittera jest monstrualna.
-    \keywords{Big Data \and bazy danych \and przetwarzanie danych \and Internet}
 \end{abstract}
 
 % TODO
